@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const today = new Date(); 
+  console.log('today', today);
+  
   return (
     <div className="App">
       <header className="App-header">
