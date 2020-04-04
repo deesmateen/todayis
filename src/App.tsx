@@ -3,25 +3,20 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const today = new Date(); 
+  const today:any = new Date(); 
   const date = { weekday: 'long' };
-  const newDate = today.toLocaleDateString('en-US', date);  
+  const newDate = today.toLocaleDateString('en-US', date);
+  const startQ:any = new Date('03/16/2020');
+  const diffDate = Math.abs(today - startQ);
+  const totalDays = Math.ceil(diffDate / (1000 * 60 * 60 * 24));
   
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          <h1>Today is {newDate}!</h1>
+          <h1>Today is {newDate}</h1>
+          <h1>It has been {totalDays} since we were sane</h1>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
