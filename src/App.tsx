@@ -15,7 +15,7 @@ function App() {
       <header className="App-header">
         <p>
           <h1>Today is {newDate}</h1>
-          <h1>It has been {totalDays} since we were sane</h1>
+          <p style={{padding: "0 50px"}}>It has been {totalDays} days since we were sane</p>
         </p>
       </header>
     </div>
