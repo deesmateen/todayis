@@ -9,12 +9,14 @@ function App() {
   const startQ:any = new Date('03/16/2020');
   const diffDate = Math.abs(today - startQ);
   const totalDays = Math.ceil(diffDate / (1000 * 60 * 60 * 24));
-  
+
+  const todays = [`Today is ${newDate}`, `It is ${newDate} all day`, `All day its ${newDate}`];
+
   return (
     <div className="App">
       <header className="App-header">
         <p>
-          <h1>Today is {newDate}</h1>
+          <h1>{todays}</h1>
           <p style={{padding: "0 50px"}}>It has been {totalDays} days since we were sane</p>
         </p>
       </header>
